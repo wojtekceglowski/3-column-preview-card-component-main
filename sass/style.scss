@@ -1,0 +1,106 @@
+@use './colors' as c;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+	min-height: 100vh;
+	font-size: 15px;
+	font-family: 'Lexend Deca', sans-serif;
+	background-color: c.$light-gray;
+}
+
+.cards {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.card__box {
+
+	padding: 50px;
+
+	.card__title {
+        padding: 20px 0;
+		font-size: 30px;
+		font-family: 'Big Shoulders Display', cursive;
+		text-transform: uppercase;
+		color: c.$light-gray;
+	}
+
+	.card__text {
+		color: c.$trans-white;
+		line-height: 1.6;
+	}
+
+	.card__btn {
+		margin-top: 60px;
+		padding: 15px 30px;
+		font-size: 16px;
+		background-color: c.$light-gray;
+		border-radius: 25px;
+		border: 1px solid c.$light-gray;
+		cursor: pointer;
+		transition: background 0.3s, color 0.3s;
+	}
+
+	.card__btn:hover {
+		background: none;
+		color: c.$light-gray;
+	}
+}
+
+.card__box--orange {
+
+	background-color: c.$orange;
+
+	.card__btn {
+		color: c.$orange;
+	}
+}
+
+.card__box--cyan {
+
+	background-color: c.$cyan;
+
+	.card__btn {
+		color: c.$cyan;
+	}
+}
+.card__box--darkcyan {
+
+	background-color: c.$dark-cyan;
+
+	.card__btn {
+		color: c.$dark-cyan;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+    .cards {
+        margin: 20px;
+    }
+
+	.card {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 820px) {
+	.cards {
+		margin: 20px;
+	}
+
+}
